@@ -3,8 +3,8 @@
 pragma solidity >=0.6.0;
 
 import './IBEP20.sol';
-import '../../contracts/math/SafeMath.sol';
-import '../../contracts/libs/Address.sol';
+import '../math/SafeMath.sol';
+import '../libs/Address.sol';
 
 /**
  * @title SafeBEP20

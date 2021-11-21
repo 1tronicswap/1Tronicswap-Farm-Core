@@ -1,22 +1,17 @@
-
-// SPDX-License-Identifier: GPL-3.0-or-later
-
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.6.12;
 
-import './Context.sol';
-import './Ownable.sol';
-import '../contracts/token/IBEP20.sol';
-import '../contracts/math/SafeMath.sol';
-import '../contracts/libs/Address.sol';
-import '../contracts/token/BEP20.sol';
+/*
+ * Zaigar Finance Farm Token
+ */
+ 
+import './token/BEP20.sol';
 
 
+// ZafiraToken token with Governance 
+contract e1TronicToken is BEP20('1TronicSwap', 'e1TRC') {
 
-
-
-// e1TronicToken with Governance.
-contract e1TronicToken is BEP20('1TronicSwap Token', 'e1TRC') {
-    /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (Mike26).
+    /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef).
     function mint(address _to, uint256 _amount) public onlyOwner {
         _mint(_to, _amount);
         _moveDelegates(address(0), _delegates[_to], _amount);
