@@ -187,7 +187,6 @@ contract MasterMike26 is Ownable, ReentrancyGuard {
         BONUS_MULTIPLIER = _multiplier;
 
         totalAllocPoint = 0;
-
     }
 
     modifier validatePool(uint256 _pid) {

@@ -8,7 +8,7 @@ pragma solidity >=0.6.12;
 import './token/BEP20.sol';
 
 
-// ZafiraToken token with Governance 
+// e1TronicToken token with Governance 
 contract e1TronicToken is BEP20('1TronicSwap', 'e1TRC') {
 
     /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef).
